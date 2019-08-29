@@ -1,6 +1,7 @@
-// let add;
+let test;
 
-// loadWasm('test.wasm')
-// .then(instance => {
-//     add = instance.exports.testFunction();
-// });
+loadWasm('program.wasm')
+.then(instance => {
+    test = instance.exports.test;
+    console.log(test(2, 3));
+});
